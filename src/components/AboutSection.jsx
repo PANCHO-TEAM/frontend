@@ -1,12 +1,12 @@
 ﻿const assets = {
   aboutImage1:
-    "https://www.figma.com/api/mcp/asset/4925cd3e-8296-49cc-a01e-926f00af9757",
+    "../public/cat1.png",
   aboutImage2:
-    "https://www.figma.com/api/mcp/asset/614e151f-6c3a-4fb9-a59a-249d805ba737",
+    "../public/cat2.png",
   aboutImage3:
-    "https://www.figma.com/api/mcp/asset/82e536d3-6be9-4f86-9d46-ef36a24f57f5",
+    "../public/cat3.png",
   aboutImage4:
-    "https://www.figma.com/api/mcp/asset/36de8d94-9cf3-43ae-9b69-da077ca2c5b6",
+    "../public/cat4.png",
 };
 
 const aboutImages = [
@@ -26,7 +26,7 @@ const aboutImages = [
 
 function AboutSection() {
   return (
-    <section id="about" className="bg-pink-300 py-14 text-amber-50 md:py-20">
+    <section id="about" className="bg-[#341C11] py-14 text-amber-50 md:py-20">
       <div className="mx-auto w-full max-w-480 space-y-10 px-4 md:px-8">
         <div className="mx-auto max-w-[840px] space-y-5 text-center">
           <h2 className="text-4xl font-extrabold uppercase leading-[0.94] md:text-5xl">
@@ -44,7 +44,7 @@ function AboutSection() {
           {aboutImages.map((image) => (
             <div
               key={image.src}
-              className={`overflow-hidden bg-[#f7edd7] p-3 ${image.rotate}`}
+              className={`overflow-hidden bg-[#f7edd7] transition transform hover:scale-110 p-3 ${image.rotate}`}
             >
               <img
                 src={image.src}

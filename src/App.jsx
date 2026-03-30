@@ -9,19 +9,6 @@ import OfficeSection from "./components/OfficeSection";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-function normalizeCard(item, index) {
-  return {
-    id: item.id ?? `${item.title ?? "card"}-${index}`,
-    title: item.title ?? "Без названия",
-    description: item.description ?? "",
-    diameter: item.diameter ?? "10-12 см",
-    weight: item.weight ?? "350-500 г",
-    servings: item.servings ?? "1-2",
-    base: item.base ?? "бисквит",
-    imageUrl: item.imageUrl ?? item.image ?? "",
-  };
-}
-
 function App() {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -40,11 +27,7 @@ function App() {
         }
 
         const payload = await response.json();
-        const normalized = Array.isArray(payload)
-          ? payload.map(normalizeCard)
-          : [];
-
-        setCards(normalized);
+        setCards(payload);
       } catch {
         setError("Не удалось загрузить карточки с бэкенда");
         setCards([]);
