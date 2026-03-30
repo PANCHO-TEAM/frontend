@@ -20,7 +20,7 @@ function App() {
         setLoading(true);
         setError("");
 
-        const response = await fetch(`${API_BASE_URL}/api/products`);
+        const response = await fetch(`/api/products`);
 
         if (!response.ok) {
           throw new Error(`API вернул ${response.status}`);

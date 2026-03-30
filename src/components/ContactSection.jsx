@@ -30,7 +30,7 @@ function ContactSection() {
       setSuccess(false);
 
       const response = await fetch(
-        `${import.meta.env.VITE_API_BASE_URL}/api/orders`,
+        `/api/orders`,
         {
           method: "POST",
           headers: {
