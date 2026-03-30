@@ -4,7 +4,7 @@
     card.weight ? `Вес: ${card.weight}` : null,
     card.servings ? `Количество порций: ${card.servings}` : null,
     card.base ? `Основа: ${card.base}` : null,
-  ].filter(Boolean)
+  ].filter(Boolean);
   return (
     <article className="border-[3px] border-[#341C11] bg-[#FFFBF1] p-4">
       <img
@@ -13,7 +13,9 @@
         className="h-60 w-full object-cover md:h-[327px]"
       />
       <div className="mt-5 space-y-4 text-[#341C11]">
-        <h3 className="text-3xl font-bold uppercase leading-[0.94]">{card.title}</h3>
+        <h3 className="text-3xl font-bold uppercase leading-[0.94]">
+          {card.title}
+        </h3>
         <div className="space-y-1 text-lg font-medium leading-tight md:text-xl">
           {specs.map((line) => (
             <p key={line}>{line}</p>
@@ -28,17 +30,24 @@
         </a>
       </div>
     </article>
-  )
+  );
 }
 
 function CatalogSection({ cards, loading, error }) {
   return (
-    <section id="catalog" className="mx-auto w-full max-w-480 px-4 py-14 md:px-8 md:py-20">
+    <section
+      id="catalog"
+      className="mx-auto w-full max-w-480 px-4 py-14 md:px-8 md:py-20"
+    >
       <h2 className="mb-10 text-4xl font-extrabold uppercase leading-[0.94] text-[#341C11] md:mb-14 md:text-5xl">
         Каталог
       </h2>
 
-      {loading && <p className="text-xl font-medium text-[#341C11]">Загружаем карточки...</p>}
+      {loading && (
+        <p className="text-xl font-medium text-[#341C11]">
+          Загружаем карточки...
+        </p>
+      )}
       {error && <p className="text-xl font-medium text-[#341C11]">{error}</p>}
 
       {!loading && !error && (
@@ -49,7 +58,7 @@ function CatalogSection({ cards, loading, error }) {
         </div>
       )}
     </section>
-  )
+  );
 }
 
-export default CatalogSection
+export default CatalogSection;

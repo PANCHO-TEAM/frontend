@@ -1,5 +1,5 @@
 ﻿const heroImage =
-  "../public/cat_in_cake.png";
+  "/cat_in_cake.png";
 
 
 function HeroSection() {

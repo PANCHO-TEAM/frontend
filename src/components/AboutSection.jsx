@@ -1,12 +1,12 @@
 ﻿const assets = {
   aboutImage1:
-    "../public/cat1.png",
+    "/cat1.png",
   aboutImage2:
-    "../public/cat2.png",
+    "/cat2.png",
   aboutImage3:
-    "../public/cat3.png",
+    "/cat3.png",
   aboutImage4:
-    "../public/cat4.png",
+    "/cat4.png",
 };
 
 const aboutImages = [
