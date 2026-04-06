@@ -4,7 +4,7 @@
   aboutImage2:
     "/cat2.png",
   aboutImage3:
-    "/Сat3.png",
+    "/сat3.png",
   aboutImage4:
     "/cat4.png",
 };
